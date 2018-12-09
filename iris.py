@@ -22,7 +22,7 @@ url = "./train.csv"
 names = ["PassengerId","Survived","Pclass","Name","Sex","Age","SibSp","Parch","Ticket","Fare","Cabin","Embarked"]
 
 # import the data from the web
-dataset = pandas.read_csv(url, names=names)
+dataset = pandas.read_csv("survey.csv", names=names)
 
 # what are the dimensions of the data?
 # print("Dimensions of data:", dataset.shape)
