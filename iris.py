@@ -17,9 +17,9 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
-
-url = "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
-names = ["sepal-length", "sepal-width", "petal-length", "petal-width", "class"]
+# url = "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+url = "./train.csv"
+names = ["PassengerId","Survived","Pclass","Name","Sex","Age","SibSp","Parch","Ticket","Fare","Cabin","Embarked"]
 
 # import the data from the web
 dataset = pandas.read_csv(url, names=names)
@@ -54,8 +54,9 @@ pandas.set_option('display.max_columns', 500)
 # plt.show()
 
 array = dataset.values
-X = array[:, 0:4]
-Y = array[:, 4]
+print(array)
+X = array[:, 0:1]
+Y = array[:, 1]
 
 validation_size = 0.2
 seed = 7
